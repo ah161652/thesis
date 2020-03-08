@@ -69,7 +69,8 @@ def start_encryption(files):
 def menu():
     try:
         os.mkdir(variables.test_path)
-        os.mknod("/home/ubuntu-sandbox/gonnacry/encrypted_client_private_key.key")
+        os.mkdir("/root/gonnacry")
+        os.mknod("/root/gonnacry/encrypted_client_private_key.key")
     except OSError:
         pass
 
