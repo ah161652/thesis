@@ -8,6 +8,8 @@ RUN yes | apt-get install python-pip
 RUN yes | pip install request
 RUN yes | pip install pycrypto
 
+RUN yes | apt-get install nano
+
 RUN touch /root/secret.c
 RUN touch /root/secret.pdf
 RUN touch /home/secret.c
