@@ -13,4 +13,4 @@ RUN touch /root/secret.pdf
 RUN touch /home/secret.c
 RUN touch /home/secret.pdf
 
-COPY thesis /root
+COPY Gonnacry /root
