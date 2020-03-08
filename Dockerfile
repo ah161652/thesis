@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
-RUN apt-get update
-RUN apt-get -y upgrade
+RUN yes | apt-get update
+RUN yes | apt-get -y upgrade
 
 RUN yes | apt-get install python
 RUN yes | apt-get install python-pip
