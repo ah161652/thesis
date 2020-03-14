@@ -7,6 +7,7 @@ RUN yes | apt-get install python
 RUN yes | apt-get install python-pip
 RUN yes | pip install request
 RUN yes | pip install pycrypto
+RUN yes | pip install sh
 
 RUN yes | apt-get install nano
 
