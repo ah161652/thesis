@@ -19,5 +19,4 @@ RUN touch /home/secret.pdf
 RUN mkdir /root/gonnacry
 RUN touch /root/gonnacry/encrypted_client_private_key.key
 
-
 COPY GonnaCry /root/Gonnacry
